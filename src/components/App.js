@@ -33,8 +33,7 @@ class Timer extends Component {
   interval() {
     if (this.state.time === 0)
       clearSetInterval = setInterval(() => {
-        this.setState({ time: this.state.time + 1 });
-      }, 1000);
+        this.setState({ time: this.state.time + 1 })}, 1000);
     if (this.state.x === 250 && this.state.y === 250)
       clearInterval(clearSetInterval);
   }
@@ -51,12 +50,9 @@ class Timer extends Component {
       <>
         <div
           className="ball"
-          style={{ left: this.state.x, top: this.state.y }}
-        ></div>
+          style={{ left: this.state.x, top: this.state.y }}></div>
         <div className="heading-timer">{this.state.time}</div>
-        <button className="start" onClick={this.moveBall}>
-          start
-        </button>
+        <button className="start" onClick={this.moveBall}>start</button>
         <div className="hole"></div>
       </>
     );
